@@ -51,7 +51,7 @@ public class RewardByDiscountServiceTest {
     @Test
     @DisplayName("Exception is thrown when invalid percentage is set")
     void exceptionThrownWhenInvalidPercentage() {
-        long percentage = -1;
+        long percentage = 0;
         assertThrows(RuntimeException.class, () -> {
         	reward.setPercentage(percentage);
         });
