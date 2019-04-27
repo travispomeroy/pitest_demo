@@ -46,9 +46,7 @@ public class RewardByGiftServiceTest {
     @DisplayName("Exception is thrown when invalid product ID is set")
     void exceptionThrownWhenInvalidProductID() {
         long productId = -1;
-        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
-            reward.setGiftProductId(productId);
-        });
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> reward.setGiftProductId(productId));
         assertTrue(exception.getMessage().contains(String.valueOf(productId)));
     }
 
